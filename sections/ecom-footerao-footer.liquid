@@ -1,0 +1,474 @@
+{% comment %}
+ EComposer (https://ecomposer.io)
+ You SHOULD NOT modify source code in this page because
+ It is automatically generated from EComposer
+ At 2025-02-15 17:15:43
+ {% endcomment %} 
+ 
+ {% assign ecom_root_url = routes.root_url %}
+ {% if ecom_root_url != '/'%}
+ {% assign ecom_root_url = routes.root_url | append: '/' %}
+ {% endif %}
+ <link rel="stylesheet" media="all" id="ecom-vendors-css_ecomposer_base" href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.7" /><noscript><link rel="stylesheet" media="all" id="ecom-vendors-css_ecomposer_base" href="https://cdn.ecomposer.app/vendors/css/ecom-base.css?v=1.7" /></noscript>
+{%capture section_id %}ecom-footerao-footer{% endcapture%}{% if section and section_id == section.id and headless == true and false%}
+{{ content_for_header }}
+{% render 'ecom_header', ECOM_THEME: true %}{% endif %}<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"/>
+{{'ecom-67681699276a0849de0b102f.css' | asset_url | stylesheet_tag }}
+<script src="{{'ecom-67681699276a0849de0b102f.js' | asset_url }}" defer="defer"></script>
+<script type="text/javascript" class="ecom-page-info">
+ window.EComposer = window.EComposer || {};
+ window.EComposer.TEMPLATE_ID="67681699276a0849de0b102f";
+ window.EComposer.FOOTER = {"template_id":"67681699276a0849de0b102f","title":"footer","type":"footer","slug":"ecom-footerao","plan_id":1};
+ </script>
+<div class="ecom-builder" id="ecom-footerao"><div class="ecom-sections" data-section-id="{{section.id}}"><section class="ecom-row ecom-core ecom-section ecom-6ejxcsuigd7" data-id="ecom-6ejxcsuigd7" data-notice-content="" style="z-index: inherit;"><div data-deep="1" class="core__row--columns"><div class="ecom-column ecom-core core__column--first ecom-4mky41m4mpv"><div class="core__column--wrapper"><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div><div class="core__blocks" index="0"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-h884n83d0t" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h4 class="ecom__heading ecom-db"><font color="#ffffff">Legal</font></h4></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-shb2n71atb" data-core-is="block"><div class="ecom-element ecom-shopify ecom-shopify__menu" deep="1"><div class="ecom-element ecom-shopify ecom-shopify__menu-wrapper" data-show-all="false"><div class="ecom-element ecom-shopify ecom-shopify__menu-container">
+ {%- capture link_handle -%}footer{%- endcapture -%}
+ {%- unless link_handle == empty -%}
+ {%- assign menu = linklists[link_handle] -%}
+ {% if menu == blank %}
+ {%- assign menu = linklists['main-menu'] -%}
+ {% endif %}
+ {%- capture show_humber -%}false{%- endcapture -%}
+ {%- capture icon_menu -%}{%- endcapture -%}
+ {%- capture icon_menu_active -%}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"></path></svg>{%- endcapture -%}
+ {%- if show_humber == 'true' -%}
+ <div class="ecom-menu__icon-humber--wrapper">
+ <div class="ecom-menu__icon-humber">
+ <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+ </div>
+ </div>
+ <div class="ecom-shopify__menu-list--mobile--wrapper">
+ <ul class="ecom-shopify__menu-list--mobile" data-show-humber="false">
+ <div class="modal-header">
+ <span class="ecom-menu-collapse-close--mobile">
+ <svg
+ xmlns="http://www.w3.org/2000/svg"
+ class="w-6 h-6"
+ fill="none"
+ viewBox="0 0 24 24"
+ stroke="currentColor"
+ >
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+ </svg>
+ </span>
+ </div>
+ {% if menu and menu.links.size %}
+ {% for link in menu.links %}
+ {% assign child_link = link.links %}
+ <li class="ecom-shopify__menu-item ecom-shopify__menu-item-type--{{link.type}} {% if child_link.size > 0 %}ecom-shopify__menu-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %} ">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if link.active or link.child_active %} ecom-shopify__menu-item--active ecom-text-active {% endif %}"
+ href="{{link.url}}"
+ title="{{link.title | escape }}"
+ target="_self"
+ >
+ {{ link.title }}
+ {%- if link.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if child_link.size > 0 %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{child_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for child in child_link %}
+ {% assign grand_link = child.links %}
+ <li class="ecom-shopify__menu-child-link-item ecom-shopify__menu-child-link-item-type--{{child.type}} {% if grand_link.size > 0 %}ecom-shopify__menu-child-link-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %} {% if child.active or child.child_active%} ecom-shopify__menu-child-link-item--active ecom-text-active{% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{child.url}}"
+ title="{{child.title | escape }}"
+ target="_self"
+ >
+ {{ child.title }}
+ {%- if child.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if grand_link.size > 0 %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{grand_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for grand in grand_link %}
+ <li class="ecom-shopify__menu-grand-link-item ecom-menu_item ecom-items ecom-shopify__menu-grand-link-item-type--{{grand.type}} {% if grand.active or grand.child_active %}ecom-shopify__menu-grand-link-item--active ecom-text-active{% endif %}">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ </li>
+ {% endfor %}
+ </ul>
+ {%- endif -%}
+ </li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+ </li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {%- endif -%}
+ <div class="ecom-shopify__menu-list--wrapper ecom-flex">
+ <ul class="ecom-shopify__menu-list" data-menu-layout="vertical">
+ {% if menu and menu.links.size %}
+ {% for link in menu.links %}
+ {% assign child_link = link.links %}
+ <li class="ecom-shopify__menu-item ecom-shopify__menu-item-type--{{link.type}} {% if child_link.size > 0 %}ecom-shopify__menu-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if link.active or link.child_active %} ecom-shopify__menu-item--active ecom-text-active {% endif %}"
+ href="{{link.url}}"
+ title="{{link.title | escape }}"
+ target="_self"
+ >
+ {{ link.title }}
+ {%- if link.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if child_link.size > 0 %}
+ {%- capture layout -%}
+ vertical
+ {%- endcapture -%}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{child_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for child in child_link %}
+ {% assign grand_link = child.links %}
+ <li class="ecom-shopify__menu-child-link-item ecom-shopify__menu-child-link-item-type--{{child.type}} {% if grand_link.size > 0 %}ecom-shopify__menu-child-link-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{child.url}}"
+ title="{{child.title | escape }}"
+ target="_self"
+ >
+ {{ child.title }}
+ {%- if child.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ {% if grand_link.size > 0 and layout == 'horizontal' %}
+ {% for grand in grand_link %}
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if grand.active %} ecom-shopify__menu-child-link-item--active ecom-text-active{% endif %}"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ {% endfor %}
+ {% endif %}
+ </div>
+ {% if grand_link.size > 0 and layout == 'vertical' %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{grand_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for grand in grand_link %}
+ <li class="ecom-shopify__menu-grand-link-item ecom-menu_item ecom-items ecom-shopify__menu-grand-link-item-type--{{grand.type}} {% if grand.active or grand.child_active %}ecom-shopify__menu-grand-link-item--active ecom-text-active{% endif %}">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ </li>
+ {% endfor %}
+ </ul>
+ {%- endif -%}
+ </li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+ </li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {% else %}
+ <p>Select a menu to show</p>
+ {%- endunless -%}
+ </div></div></div></div> </div></div></div></div> <div class="ecom-column ecom-core ecom-kw1ewsw8iqb"><div class="core__column--wrapper"><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div><div class="core__blocks" index="1"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-iqlfilojr0m" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h4 class="ecom__heading ecom-db">Discover</h4></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-utsmfdycgf" data-core-is="block"><div class="ecom-element ecom-shopify ecom-shopify__menu" deep="1"><div class="ecom-element ecom-shopify ecom-shopify__menu-wrapper" data-show-all="false"><div class="ecom-element ecom-shopify ecom-shopify__menu-container">
+ {%- capture link_handle -%}discover{%- endcapture -%}
+ {%- unless link_handle == empty -%}
+ {%- assign menu = linklists[link_handle] -%}
+ {% if menu == blank %}
+ {%- assign menu = linklists['main-menu'] -%}
+ {% endif %}
+ {%- capture show_humber -%}false{%- endcapture -%}
+ {%- capture icon_menu -%}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"></path></svg>{%- endcapture -%}
+ {%- capture icon_menu_active -%}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"></path></svg>{%- endcapture -%}
+ {%- if show_humber == 'true' -%}
+ <div class="ecom-menu__icon-humber--wrapper">
+ <div class="ecom-menu__icon-humber">
+ <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+ </div>
+ </div>
+ <div class="ecom-shopify__menu-list--mobile--wrapper">
+ <ul class="ecom-shopify__menu-list--mobile" data-show-humber="undefined">
+ <div class="modal-header">
+ <span class="ecom-menu-collapse-close--mobile">
+ <svg
+ xmlns="http://www.w3.org/2000/svg"
+ class="w-6 h-6"
+ fill="none"
+ viewBox="0 0 24 24"
+ stroke="currentColor"
+ >
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+ </svg>
+ </span>
+ </div>
+ {% if menu and menu.links.size %}
+ {% for link in menu.links %}
+ {% assign child_link = link.links %}
+ <li class="ecom-shopify__menu-item ecom-shopify__menu-item-type--{{link.type}} {% if child_link.size > 0 %}ecom-shopify__menu-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %} ">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if link.active or link.child_active %} ecom-shopify__menu-item--active ecom-text-active {% endif %}"
+ href="{{link.url}}"
+ title="{{link.title | escape }}"
+ target="_self"
+ >
+ {{ link.title }}
+ {%- if link.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if child_link.size > 0 %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{child_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for child in child_link %}
+ {% assign grand_link = child.links %}
+ <li class="ecom-shopify__menu-child-link-item ecom-shopify__menu-child-link-item-type--{{child.type}} {% if grand_link.size > 0 %}ecom-shopify__menu-child-link-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %} {% if child.active or child.child_active%} ecom-shopify__menu-child-link-item--active ecom-text-active{% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{child.url}}"
+ title="{{child.title | escape }}"
+ target="_self"
+ >
+ {{ child.title }}
+ {%- if child.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if grand_link.size > 0 %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{grand_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for grand in grand_link %}
+ <li class="ecom-shopify__menu-grand-link-item ecom-menu_item ecom-items ecom-shopify__menu-grand-link-item-type--{{grand.type}} {% if grand.active or grand.child_active %}ecom-shopify__menu-grand-link-item--active ecom-text-active{% endif %}">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ </li>
+ {% endfor %}
+ </ul>
+ {%- endif -%}
+ </li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+ </li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {%- endif -%}
+ <div class="ecom-shopify__menu-list--wrapper ecom-flex">
+ <ul class="ecom-shopify__menu-list" data-menu-layout="vertical">
+ {% if menu and menu.links.size %}
+ {% for link in menu.links %}
+ {% assign child_link = link.links %}
+ <li class="ecom-shopify__menu-item ecom-shopify__menu-item-type--{{link.type}} {% if child_link.size > 0 %}ecom-shopify__menu-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if link.active or link.child_active %} ecom-shopify__menu-item--active ecom-text-active {% endif %}"
+ href="{{link.url}}"
+ title="{{link.title | escape }}"
+ target="_self"
+ >
+ {{ link.title }}
+ {%- if link.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ </div>
+ {% if child_link.size > 0 %}
+ {%- capture layout -%}
+ vertical
+ {%- endcapture -%}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{child_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for child in child_link %}
+ {% assign grand_link = child.links %}
+ <li class="ecom-shopify__menu-child-link-item ecom-shopify__menu-child-link-item-type--{{child.type}} {% if grand_link.size > 0 %}ecom-shopify__menu-child-link-item--has-children {% else %} ecom-shopify__menu-item--link {% endif %}">
+ <div class="ecom-menu_item ecom-items">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{child.url}}"
+ title="{{child.title | escape }}"
+ target="_self"
+ >
+ {{ child.title }}
+ {%- if child.levels > 0 -%}
+ <div class="ecom-element--menu_icon">
+ <div class="ecom-items--icon ecom-element--menu_icon--normal">
+ {{ icon_menu }}
+ </div>
+ <div class="ecom-items--icon ecom-element--menu_icon--active">
+ {{ icon_menu_active }}
+ </div>
+ </div>
+ {%- endif -%}
+ </a>
+ {% if grand_link.size > 0 and layout == 'horizontal' %}
+ {% for grand in grand_link %}
+ <a
+ class="ecom-menu_title ecom-element--menu_title {% if grand.active %} ecom-shopify__menu-child-link-item--active ecom-text-active{% endif %}"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ {% endfor %}
+ {% endif %}
+ </div>
+ {% if grand_link.size > 0 and layout == 'vertical' %}
+ <ul
+ class="ecom-shopify__menu-sub-menu"
+ data-menu-size="{{grand_link.size}}"
+ data-menu-level="{{child_link.level}}"
+ >
+ {% for grand in grand_link %}
+ <li class="ecom-shopify__menu-grand-link-item ecom-menu_item ecom-items ecom-shopify__menu-grand-link-item-type--{{grand.type}} {% if grand.active or grand.child_active %}ecom-shopify__menu-grand-link-item--active ecom-text-active{% endif %}">
+ <a
+ class="ecom-menu_title ecom-element--menu_title"
+ href="{{grand.url}}"
+ title="{{grand.title | escape }}"
+ target="_self"
+ >
+ {{ grand.title }}
+ </a>
+ </li>
+ {% endfor %}
+ </ul>
+ {%- endif -%}
+ </li>
+ {% endfor %}
+ </ul>
+ {% endif %}
+ </li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {% else %}
+ <p>Select a menu to show</p>
+ {%- endunless -%}
+ </div></div></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-9ga4t45ywqu" data-core-is="block"><div class="ecom-element ecom-icon ecom-flex" deep="1"><a class="ecom-icon--container ecom-in_flex" href="https://www.tiktok.com/@tootonelondon"><svg fill="currentColor" width="800px" height="800px" viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg"><path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"></path></svg></a></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-z2ufuvem44h" data-core-is="block"><div class="ecom-element ecom-icon ecom-flex" deep="1"><a class="ecom-icon--container ecom-in_flex" href="https://www.instagram.com/tootonelondon"><svg version="1.1" id="lni_lni-instagram-original" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" fill="currentColor"><g><path d="M62.9,19.2c-0.1-3.2-0.7-5.5-1.4-7.6S59.7,7.8,58,6.1s-3.4-2.7-5.4-3.5c-2-0.8-4.2-1.3-7.6-1.4C41.5,1,40.5,1,32,1s-9.4,0-12.8,0.1s-5.5,0.7-7.6,1.4S7.8,4.4,6.1,6.1s-2.8,3.4-3.5,5.5c-0.8,2-1.3,4.2-1.4,7.6S1,23.5,1,32s0,9.4,0.1,12.8c0.1,3.4,0.7,5.5,1.4,7.6c0.7,2.1,1.8,3.8,3.5,5.5s3.5,2.8,5.5,3.5c2,0.7,4.2,1.3,7.6,1.4C22.5,63,23.4,63,31.9,63s9.4,0,12.8-0.1s5.5-0.7,7.6-1.4c2.1-0.7,3.8-1.8,5.5-3.5s2.8-3.5,3.5-5.5c0.7-2,1.3-4.2,1.4-7.6c0.1-3.2,0.1-4.2,0.1-12.7S63,22.6,62.9,19.2z M57.3,44.5c-0.1,3-0.7,4.6-1.1,5.8c-0.6,1.4-1.3,2.5-2.4,3.5c-1.1,1.1-2.1,1.7-3.5,2.4c-1.1,0.4-2.7,1-5.8,1.1c-3.2,0-4.2,0-12.4,0s-9.3,0-12.5-0.1c-3-0.1-4.6-0.7-5.8-1.1c-1.4-0.6-2.5-1.3-3.5-2.4c-1.1-1.1-1.7-2.1-2.4-3.5c-0.4-1.1-1-2.7-1.1-5.8c0-3.1,0-4.1,0-12.4s0-9.3,0.1-12.5c0.1-3,0.7-4.6,1.1-5.8c0.6-1.4,1.3-2.5,2.3-3.5c1.1-1.1,2.1-1.7,3.5-2.3c1.1-0.4,2.7-1,5.8-1.1c3.2-0.1,4.2-0.1,12.5-0.1s9.3,0,12.5,0.1c3,0.1,4.6,0.7,5.8,1.1c1.4,0.6,2.5,1.3,3.5,2.3c1.1,1.1,1.7,2.1,2.4,3.5c0.4,1.1,1,2.7,1.1,5.8c0.1,3.2,0.1,4.2,0.1,12.5S57.4,41.3,57.3,44.5z"></path><path d="M32,16.1c-8.9,0-15.9,7.2-15.9,15.9c0,8.9,7.2,15.9,15.9,15.9S48,40.9,48,32S40.9,16.1,32,16.1z M32,42.4c-5.8,0-10.4-4.7-10.4-10.4S26.3,21.6,32,21.6c5.8,0,10.4,4.6,10.4,10.4S37.8,42.4,32,42.4z"></path><ellipse cx="48.7" cy="15.4" rx="3.7" ry="3.7"></ellipse></g></svg></a></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-if9omdjotlp" data-core-is="block"><div class="ecom-element ecom-icon ecom-flex" deep="1"><a class="ecom-icon--container ecom-in_flex" href="https://www.facebook.com/tootonelondon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 19.253906 2 C 15.311906 2 13 4.0821719 13 8.8261719 L 13 13 L 8 13 L 8 18 L 13 18 L 13 30 L 18 30 L 18 18 L 22 18 L 23 13 L 18 13 L 18 9.671875 C 18 7.884875 18.582766 7 20.259766 7 L 23 7 L 23 2.2050781 C 22.526 2.1410781 21.144906 2 19.253906 2 z"></path></svg></a></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-iinztv0lix8" data-core-is="block"><div class="ecom-element ecom-icon ecom-flex" deep="1"><a class="ecom-icon--container ecom-in_flex" href="https://www.youtube.com/@TooToneLondon"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a></div></div> </div></div></div></div> <div class="ecom-column ecom-core core__column--last ecom-zatf1uv19dj"><div class="core__column--wrapper"><div class="ecom-column__overlay"><div class="ecom-overlay"></div></div><div class="core__blocks" index="2"><div class="core__blocks--body"><div class="ecom-block ecom-core core__block elmspace ecom-nzgp5aopd9" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h4 class="ecom__heading ecom-db">ABOUT US&nbsp;</h4></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-yihhrite3gi" data-core-is="block"><div class="ecom__element element__heading ecom-element ecom-html" data-stopdrag="true" deep="1"><h4 class="ecom__heading ecom-db">TooTone London was born out of the need for lashes designed to blend seamlessly with your natural hair tone. Our natural coloured lashes complement Blonde, Auburn, Brunette and Black shades. Choose from popular styles for effortless elegance or bold glam, perfectly matched to celebrate your natural beauty.&nbsp;</h4></div></div> <div class="ecom-block ecom-core core__block elmspace ecom-umo1hm32cc" data-core-is="block"><div class="ecom__element ecom-element-button ecom-button-default" deep="1"><a class="ecom__element--button ecom-flex ecom-fl_center ecom-al_center" href="https://www.tootonelondon.com/pages/about"><span class="ecom__element--button-icon-text">OUR STORY </span><span class="ecom-button-icon ecom__element--button-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"><path d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z"></path></svg></span></a></div></div> </div></div></div></div> </div><div class="ecom-section__overlay"><div class="ecom-overlay"></div></div> </section>
+</div></div>
+{% schema %}
+{
+ "name": "footer",
+ "locales": {},
+ "settings": [
+ {
+ "type": "header",
+ "content": "The section was generated by [Ecomposer](https:\/\/ecomposer.io).",
+ "info": "\n EComposer is a Visual Page Builder app on Shopify AppStore.\n It provides 100+ pre-built templates in library,\n so you can build unlimited pages that you can imagine with it.\n Please don't add Shopify sections to EComposer's page in the theme customize. If you do this, Shopify sections will be deleted when you republish your page in EComposer\n "
+ },
+ {
+ "type": "header",
+ "content": "[EDIT WITH EComposer APP \u2192](https:\/\/ecomposer.app\/shop?open_builder=1&page=footer&id=67681699276a0849de0b102f&utm_source=theme-customize)",
+ "info": "(*You must install the app to start editing this section [Learn more](https:\/\/help.ecomposer.io\/docs\/getting-started\/installation\/))"
+ }
+ ]
+}
+{% endschema %}

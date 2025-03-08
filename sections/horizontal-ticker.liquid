@@ -1,0 +1,239 @@
+<style>
+  .horizontal-ticker {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .horizontal-ticker__inner {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .horizontal-ticker__container {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    will-change: transform;
+    {% comment %} animation: horTicker 50s linear infinite; {% endcomment %}
+  }
+  
+  .horizontal-ticker__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    flex-shrink: 0;
+  }
+
+  .horizontal-ticker__item img {
+    width: 80px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+  }
+
+  @keyframes horTicker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Safari Fix */
+  @supports (-webkit-touch-callout: none) {
+    .horizontal-ticker__container {
+      {% comment %} animation: horTicker 50s linear infinite; {% endcomment %}
+      transform: translateX(0);
+    }
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .horizontal-ticker__container {
+      animation-duration: 30s;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .horizontal-ticker__item {
+      padding: 0 5px;
+    }
+  }
+</style>
+
+<div class="horizontal-ticker">
+  <div class="horizontal-ticker__inner">
+    <div class="horizontal-ticker__container">
+      {%- for block in section.blocks -%}
+        <div class="horizontal-ticker__item">
+          {% if block.settings.image-picker %}
+            <img src="{{ block.settings.image-picker | image_url: width: 3200 }}" 
+                 srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
+                 alt="Ticker Image"
+                 loading="lazy">
+          {% endif %}
+        </div>
+      {%- endfor -%}
+      <!-- Duplicate for continuous loop -->
+      {%- for block in section.blocks -%}
+        <div class="horizontal-ticker__item">
+          {% if block.settings.image-picker %}
+            <img src="{{ block.settings.image-picker | image_url: width: 3200 }}" 
+                 srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
+                 alt="Ticker Image"
+                 loading="lazy">
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Horizontal Ticker",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "animation",
+      "label": "Animation",
+      "default":true
+    },
+    {
+        "type": "range",
+        "id": "speed",
+        "label": "Ticker speed",
+        "min": 1,
+        "max": 7,
+        "default": 3,
+        "step": 0.5
+    },
+    {
+        "type": "range",
+        "id": "text_spacing",
+        "label": "Text spacing",
+        "min": 1,
+        "max": 7,
+        "default": 3,
+        "step": 0.5
+    },
+    {
+        "type": "select",
+        "id": "text_size",
+        "label": "Text size",
+        "options": [
+            {
+                "value": "1.25",
+                "label": "Extra small"
+            },
+            {
+                "value": "1.5",
+                "label": "Small"
+            },
+            {
+                "value": "1.75",
+                "label": "Medium"
+            },
+            {
+                "value": "2",
+                "label": "Large"
+            },
+            {
+                "value": "2.5",
+                "label": "Extra large"
+            }
+        ],
+        "default": "1.75"
+    },
+    {
+        "type": "checkbox",
+        "id": "italic_text",
+        "label": "Italic text",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "uppercase_text",
+        "label": "Uppercase text",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "bold_text",
+        "label": "Bold text",
+        "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image-picker",
+          "label": "Image picker"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "default": "Shrine Theme",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+  {
+    "name": "Horizontal Ticker",
+    "blocks": [
+      {
+        "type": "text"
+      },
+      {
+        "type": "text"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

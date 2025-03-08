@@ -1,0 +1,110 @@
+{% schema %}
+{
+  "name": "Custom Video",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Upload Video"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "YouTube/Vimeo URL",
+      "info": "Leave blank if using uploaded video."
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop Video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "muted",
+      "label": "Mute Video",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Video",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  /* Custom Video Section Styling */
+  .custom-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  /* Optional: Add a background or padding if you'd like the video to have a border or space */
+  .custom-video {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .custom-video iframe {
+    width: 1000px;
+    height: 600px;
+    margin: 0px 20px;
+
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 425px) {
+    .custom-video iframe {
+      margin: 0;
+      {% comment %} height: 100%; {% endcomment %}
+    }
+  }
+</style>
+
+<div class="custom-video-container">
+  {% if section.settings.video_url != blank %}
+    <!-- Embed YouTube/Vimeo Video -->
+    <div class="custom-video">
+      <iframe
+        src="{{ section.settings.video_url }}?autoplay={% if section.settings.autoplay %}1{% else %}0{% endif %}&loop={% if section.settings.loop %}1{% else %}0{% endif %}&mute={% if section.settings.muted %}1{% else %}0{% endif %}"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+  {% elsif section.settings.video_file != blank %}
+    <!-- Shopify Uploaded Video -->
+    <div class="custom-video">
+      <video
+        {% if section.settings.autoplay %}
+          autoplay
+        {% endif %}
+        {% if section.settings.loop %}
+          loop
+        {% endif %}
+        {% if section.settings.muted %}
+          muted
+        {% endif %}
+        playsinline
+      >
+        <source src="{{ section.settings.video_file | file_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  {% else %}
+    <p>Please upload a video or enter a video URL.</p>
+  {% endif %}
+</div>
