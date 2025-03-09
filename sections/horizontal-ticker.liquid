@@ -23,8 +23,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0 7rem;
     flex-shrink: 0;
+    flex-direction: column;
+    margin: 10px 0px;
   }
 
   .horizontal-ticker__item img {
@@ -33,6 +35,10 @@
     aspect-ratio: 1/1;
     object-fit: contain;
     image-rendering: crisp-edges;
+  }
+
+  .horizontal-ticker__item--uppercase{
+    margin: 0 !important;
   }
 
   @keyframes horTicker {
@@ -67,7 +73,7 @@
 </style>
 
 <div class="horizontal-ticker">
-  <div class="horizontal-ticker__inner">
+  <div class="horizontal-ticker__inner"> 
     <div class="horizontal-ticker__container">
       {%- for block in section.blocks -%}
         <div class="horizontal-ticker__item">
@@ -76,6 +82,11 @@
                  srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
                  alt="Ticker Image"
                  loading="lazy">
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <p class="{% if section.settings.italic_text %} horizontal-ticker__item--italic{% endif %}{% if section.settings.uppercase_text %} horizontal-ticker__item--uppercase{% endif %}{% if section.settings.bold_text %} horizontal-ticker__item--bold{% endif %}">
+            {{ block.settings.title }}
+          </p>
           {% endif %}
         </div>
       {%- endfor -%}
@@ -87,6 +98,11 @@
                  srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
                  alt="Ticker Image"
                  loading="lazy">
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <p class="{% if section.settings.italic_text %} horizontal-ticker__item--italic{% endif %}{% if section.settings.uppercase_text %} horizontal-ticker__item--uppercase{% endif %}{% if section.settings.bold_text %} horizontal-ticker__item--bold{% endif %}">
+            {{ block.settings.title }}
+          </p>
           {% endif %}
         </div>
       {%- endfor -%}
