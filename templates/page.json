@@ -1,1 +1,141 @@
-{"sections":{"main":{"type":"main-page","custom_css":[],"settings":{"padding_top":36,"padding_bottom":36}},"collapsible_content_BUgdQt":{"type":"collapsible-content","blocks":{"collapsible_row_YPX4xL":{"type":"collapsible_row","disabled":true,"settings":{"heading":"How can I contact you?","icon":"check_mark","row_content":"<p>You can reach us via email at <strong>hello@tootonelondon.com<\/strong>. Our team aims to respond within 24–48 hours.<\/p>","page":""}},"collapsible_row_y7paBh":{"type":"collapsible_row","disabled":true,"settings":{"heading":"How can I get featured on your page?","icon":"check_mark","row_content":"<p>We love seeing your lashes! Tag <strong>@tootonelondon<\/strong> on Instagram\/TikTok and use hashtags relevant to the lashes you’re wearing. Keep an eye out, you might see your work featured on our social platforms or website.<\/p>","page":""}}},"block_order":["collapsible_row_YPX4xL","collapsible_row_y7paBh"],"settings":{"caption":"","heading":"","heading_size":"h1","heading_alignment":"center","layout":"none","color_scheme":"","container_color_scheme":"","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}},"collapsible_content_4GY8K4":{"type":"collapsible-content","blocks":{"collapsible_row_WfcBJ8":{"type":"collapsible_row","disabled":true,"settings":{"heading":"How can I contact you?","icon":"check_mark","row_content":"<p>You can reach us via email at <strong>hello@tootonelondon.com<\/strong>. Our team aims to respond within 24–48 hours.<\/p>","page":""}},"collapsible_row_yMxWdL":{"type":"collapsible_row","disabled":true,"settings":{"heading":"Do you offer UK-wide delivery?","icon":"check_mark","row_content":"<p>Yes, we deliver throughout the UK. Delivery times may vary depending on your location.<\/p>","page":""}},"collapsible_row_VEdtHn":{"type":"collapsible_row","settings":{"heading":"How long will it take to receive my order?","icon":"check_mark","row_content":"<p>Standard delivery typically takes 3–5 working days. For faster service, we also offer express delivery options at checkout.<\/p>","page":""}},"collapsible_row_8CCmdG":{"type":"collapsible_row","disabled":true,"settings":{"heading":"How much does shipping cost?","icon":"check_mark","row_content":"<p>Shipping fees depend on the weight of your order and your location. Exact costs will be calculated at checkout.<\/p>","page":""}}},"block_order":["collapsible_row_WfcBJ8","collapsible_row_yMxWdL","collapsible_row_VEdtHn","collapsible_row_8CCmdG"],"disabled":true,"settings":{"caption":"","heading":"<strong>Shipping & Delivery<\/strong>","heading_size":"h2","heading_alignment":"left","layout":"none","color_scheme":"","container_color_scheme":"","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":36,"padding_bottom":36}}},"order":["main","collapsible_content_BUgdQt","collapsible_content_4GY8K4"]}
+{
+  "sections": {
+    "video_tpb6ph": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify://files/videos/How to Apply Video.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_BUgdQt": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_YPX4xL": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How can I contact you?",
+            "icon": "check_mark",
+            "row_content": "<p>You can reach us via email at <strong>hello@tootonelondon.com</strong>. Our team aims to respond within 24–48 hours.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_y7paBh": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How can I get featured on your page?",
+            "icon": "check_mark",
+            "row_content": "<p>We love seeing your lashes! Tag <strong>@tootonelondon</strong> on Instagram/TikTok and use hashtags relevant to the lashes you’re wearing. Keep an eye out, you might see your work featured on our social platforms or website.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YPX4xL",
+        "collapsible_row_y7paBh"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_4GY8K4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_WfcBJ8": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How can I contact you?",
+            "icon": "check_mark",
+            "row_content": "<p>You can reach us via email at <strong>hello@tootonelondon.com</strong>. Our team aims to respond within 24–48 hours.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yMxWdL": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Do you offer UK-wide delivery?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes, we deliver throughout the UK. Delivery times may vary depending on your location.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VEdtHn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long will it take to receive my order?",
+            "icon": "check_mark",
+            "row_content": "<p>Standard delivery typically takes 3–5 working days. For faster service, we also offer express delivery options at checkout.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8CCmdG": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "How much does shipping cost?",
+            "icon": "check_mark",
+            "row_content": "<p>Shipping fees depend on the weight of your order and your location. Exact costs will be calculated at checkout.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_WfcBJ8",
+        "collapsible_row_yMxWdL",
+        "collapsible_row_VEdtHn",
+        "collapsible_row_8CCmdG"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Shipping & Delivery</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "video_tpb6ph",
+    "main",
+    "collapsible_content_BUgdQt",
+    "collapsible_content_4GY8K4"
+  ]
+}
