@@ -10,15 +10,15 @@
     overflow: hidden;
     white-space: nowrap;
   }
-  
+
   .horizontal-ticker__container {
     display: flex;
     width: fit-content;
     align-items: center;
     will-change: transform;
-    {% comment %} animation: horTicker 50s linear infinite; {% endcomment %}
+    animation: horTicker 100s linear infinite;
   }
-  
+
   .horizontal-ticker__item {
     display: flex;
     align-items: center;
@@ -69,47 +69,53 @@
     .horizontal-ticker__item {
       padding: 0 5px;
     }
+  .horizontal-ticker__item img {
+    width: 70px;
+  }
   }
 </style>
 
 <div class="horizontal-ticker">
-  <div class="horizontal-ticker__inner"> 
+  <div class="horizontal-ticker__inner">
     <div class="horizontal-ticker__container">
       {%- for block in section.blocks -%}
         <div class="horizontal-ticker__item">
-          {% if block.settings.image-picker %}
-            <img src="{{ block.settings.image-picker | image_url: width: 3200 }}" 
-                 srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
-                 alt="Ticker Image"
-                 loading="lazy">
+          {% if block.settings['image-picker'] %}
+            <img
+              src="{{ block.settings.image-picker | image_url: width: 3200 }}"
+              srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x"
+              alt="Ticker Image"
+              loading="lazy"
+            >
           {% endif %}
           {% if block.settings.title != blank %}
             <p class="{% if section.settings.italic_text %} horizontal-ticker__item--italic{% endif %}{% if section.settings.uppercase_text %} horizontal-ticker__item--uppercase{% endif %}{% if section.settings.bold_text %} horizontal-ticker__item--bold{% endif %}">
-            {{ block.settings.title }}
-          </p>
+              {{ block.settings.title }}
+            </p>
           {% endif %}
         </div>
       {%- endfor -%}
       <!-- Duplicate for continuous loop -->
       {%- for block in section.blocks -%}
         <div class="horizontal-ticker__item">
-          {% if block.settings.image-picker %}
-            <img src="{{ block.settings.image-picker | image_url: width: 3200 }}" 
-                 srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x" 
-                 alt="Ticker Image"
-                 loading="lazy">
+          {% if block.settings['image-picker'] %}
+            <img
+              src="{{ block.settings.image-picker | image_url: width: 3200 }}"
+              srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x"
+              alt="Ticker Image"
+              loading="lazy"
+            >
           {% endif %}
           {% if block.settings.title != blank %}
             <p class="{% if section.settings.italic_text %} horizontal-ticker__item--italic{% endif %}{% if section.settings.uppercase_text %} horizontal-ticker__item--uppercase{% endif %}{% if section.settings.bold_text %} horizontal-ticker__item--bold{% endif %}">
-            {{ block.settings.title }}
-          </p>
+              {{ block.settings.title }}
+            </p>
           {% endif %}
         </div>
       {%- endfor -%}
     </div>
   </div>
 </div>
-
 
 {% schema %}
 {
@@ -119,71 +125,71 @@
       "type": "checkbox",
       "id": "animation",
       "label": "Animation",
-      "default":true
+      "default": true
     },
     {
-        "type": "range",
-        "id": "speed",
-        "label": "Ticker speed",
-        "min": 1,
-        "max": 7,
-        "default": 3,
-        "step": 0.5
+      "type": "range",
+      "id": "speed",
+      "label": "Ticker speed",
+      "min": 1,
+      "max": 7,
+      "default": 3,
+      "step": 0.5
     },
     {
-        "type": "range",
-        "id": "text_spacing",
-        "label": "Text spacing",
-        "min": 1,
-        "max": 7,
-        "default": 3,
-        "step": 0.5
+      "type": "range",
+      "id": "text_spacing",
+      "label": "Text spacing",
+      "min": 1,
+      "max": 7,
+      "default": 3,
+      "step": 0.5
     },
     {
-        "type": "select",
-        "id": "text_size",
-        "label": "Text size",
-        "options": [
-            {
-                "value": "1.25",
-                "label": "Extra small"
-            },
-            {
-                "value": "1.5",
-                "label": "Small"
-            },
-            {
-                "value": "1.75",
-                "label": "Medium"
-            },
-            {
-                "value": "2",
-                "label": "Large"
-            },
-            {
-                "value": "2.5",
-                "label": "Extra large"
-            }
-        ],
-        "default": "1.75"
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        {
+          "value": "1.25",
+          "label": "Extra small"
+        },
+        {
+          "value": "1.5",
+          "label": "Small"
+        },
+        {
+          "value": "1.75",
+          "label": "Medium"
+        },
+        {
+          "value": "2",
+          "label": "Large"
+        },
+        {
+          "value": "2.5",
+          "label": "Extra large"
+        }
+      ],
+      "default": "1.75"
     },
     {
-        "type": "checkbox",
-        "id": "italic_text",
-        "label": "Italic text",
-        "default": false
+      "type": "checkbox",
+      "id": "italic_text",
+      "label": "Italic text",
+      "default": false
     },
     {
-        "type": "checkbox",
-        "id": "uppercase_text",
-        "label": "Uppercase text",
-        "default": false
+      "type": "checkbox",
+      "id": "uppercase_text",
+      "label": "Uppercase text",
+      "default": false
     },
     {
-        "type": "checkbox",
-        "id": "bold_text",
-        "label": "Bold text",
-        "default": false
+      "type": "checkbox",
+      "id": "bold_text",
+      "label": "Bold text",
+      "default": false
     },
     {
       "type": "color_scheme",
@@ -236,20 +242,20 @@
     }
   ],
   "presets": [
-  {
-    "name": "Horizontal Ticker",
-    "blocks": [
-      {
-        "type": "text"
-      },
-      {
-        "type": "text"
-      },
-      {
-        "type": "text"
-      }
-    ]
-  }
-]
+    {
+      "name": "Horizontal Ticker",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
