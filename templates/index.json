@@ -220,14 +220,14 @@
         "text_N473ra": {
           "type": "text",
           "settings": {
-            "image-picker": "shopify://shop_images/svg_1.png",
+            "image-picker": "shopify://shop_images/svg_3.png",
             "title": "VEGAN"
           }
         },
         "text_YXE6Tf": {
           "type": "text",
           "settings": {
-            "image-picker": "shopify://shop_images/svg_4.png",
+            "image-picker": "shopify://shop_images/brush.png",
             "title": "RANGE OF COLOURS"
           }
         }
