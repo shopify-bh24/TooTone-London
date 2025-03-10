@@ -217,17 +217,17 @@
             "title": "HANDMADE"
           }
         },
-        "text_pqHKqN": {
+        "text_N473ra": {
           "type": "text",
           "settings": {
-            "image-picker": "shopify://shop_images/Vegan.png",
+            "image-picker": "shopify://shop_images/svg_1.png",
             "title": "VEGAN"
           }
         },
-        "text_A6wwzY": {
+        "text_YXE6Tf": {
           "type": "text",
           "settings": {
-            "image-picker": "shopify://shop_images/brush.png",
+            "image-picker": "shopify://shop_images/svg_4.png",
             "title": "RANGE OF COLOURS"
           }
         }
@@ -236,8 +236,8 @@
         "text_HmBUyk",
         "text_D9Tay8",
         "text_fxy9kc",
-        "text_pqHKqN",
-        "text_A6wwzY"
+        "text_N473ra",
+        "text_YXE6Tf"
       ],
       "custom_css": [
         "@media (max-width: 568px) {.horizontal-ticker__item {padding: 0 2.5rem; } .horizontal-ticker__item--uppercase {font-size: 1.2rem; }}"
