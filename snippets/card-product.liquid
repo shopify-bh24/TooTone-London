@@ -83,7 +83,10 @@
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-              {%- if card_product.media[1] != null and show_secondary_image -%}
+              {% comment %} {%- if card_product.media[1] != null and show_secondary_image -%} {% endcomment %}
+
+                {%- if card_product.media[1] != null and show_secondary_image and request.path contains '/collections/all' -%}
+
 
                {% if card_product.selected_or_first_available_variant.metafields.custom.collection_page_hover_image != blank %}
                     <img

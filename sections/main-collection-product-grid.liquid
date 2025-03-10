@@ -171,6 +171,9 @@
                     style="--animation-order: {{ forloop.index }};"
                   {% endif %}
                 >
+                  {% assign current_url = request.path %}
+                  {% assign collection_url = '/collections/all' %}
+                  
                   {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
@@ -181,8 +184,10 @@
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
-                    section_id: section.id
+                    section_id: section.id,
+                    disable_hover_image: current_url != collection_url
                   %}
+                  
                   {% comment %} {% render 'card-product',
                     card_product: product,
                     media_aspect_ratio: section.settings.image_ratio,
