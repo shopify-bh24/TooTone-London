@@ -35,26 +35,34 @@
     aspect-ratio: 1/1;
     object-fit: contain;
     image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    position: relative;
+    animation: fadeFix 1s infinite alternate;
   }
 
-  .horizontal-ticker__item--uppercase{
+  .horizontal-ticker__item--uppercase {
     margin: 0 !important;
   }
 
   @keyframes horTicker {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
+  }
+
+  @keyframes fadeFix {
+    0% { opacity: 0.99; }
+    100% { opacity: 1; }
   }
 
   /* Safari Fix */
   @supports (-webkit-touch-callout: none) {
     .horizontal-ticker__container {
-      {% comment %} animation: horTicker 50s linear infinite; {% endcomment %}
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -69,9 +77,9 @@
     .horizontal-ticker__item {
       padding: 0 5px;
     }
-  .horizontal-ticker__item img {
-    width: 70px;
-  }
+    .horizontal-ticker__item img {
+      width: 70px;
+    }
   }
 </style>
 
@@ -85,7 +93,6 @@
               src="{{ block.settings.image-picker | image_url: width: 3200 }}"
               srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x"
               alt="Ticker Image"
-              loading="lazy"
             >
           {% endif %}
           {% if block.settings.title != blank %}
@@ -95,6 +102,7 @@
           {% endif %}
         </div>
       {%- endfor -%}
+      
       <!-- Duplicate for continuous loop -->
       {%- for block in section.blocks -%}
         <div class="horizontal-ticker__item">
@@ -103,7 +111,6 @@
               src="{{ block.settings.image-picker | image_url: width: 3200 }}"
               srcset="{{ block.settings.image-picker | image_url: width: 1600 }} 1x, {{ block.settings.image-picker | image_url: width: 3200 }} 2x"
               alt="Ticker Image"
-              loading="lazy"
             >
           {% endif %}
           {% if block.settings.title != blank %}
@@ -116,6 +123,7 @@
     </div>
   </div>
 </div>
+
 
 {% schema %}
 {
